@@ -57,8 +57,11 @@ cout << "Enter Pair of edges:" ;
 	for (int i = 0; i < n; i++) {
     	visited[i] = false;
 	}
-
+	double start_time = omp_get_wtime();
 	dfs(start_node);
+	double end_time = omp_get_wtime();
+	double elapsed_time = end_time - start_time;
+    cout << "Time Required for DFS: " << elapsed_time << " seconds" << endl;
 
 /*	for (int i = 0; i < n; i++) {
     	if (visited[i]) {
@@ -68,5 +71,4 @@ cout << "Enter Pair of edges:" ;
 
 	return 0;
 }
-
 
