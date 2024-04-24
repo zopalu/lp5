@@ -51,8 +51,14 @@ int main() {
     }
 
     cout << "BFS starting from node " << start_node << ": ";
-    bfs(start_node);
+    
+    double start_time = omp_get_wtime();
+	bfs(start_node);
+	double end_time = omp_get_wtime();
+	double elapsed_time = end_time - start_time;
+    cout << "Time Required for BFS: " << elapsed_time << " seconds" << endl;
+
+    
 
     return 0;
 }
-
