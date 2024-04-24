@@ -1,0 +1,3 @@
+-std=c++11
+
+-static-libgcc -std=gnu++11 -fopenmp
